@@ -21,7 +21,7 @@ class CollapsibleDrawerState extends State<CollapsibleDrawer>
     super.initState();
     _animationController =
         AnimationController(vsync: this, duration: Duration(milliseconds: 200));
-    widthAnimation = Tween<double>(begin: maxWidth, end: minWidth)
+    widthAnimation = Tween<double>(begin: minWidth, end: maxWidth)
         .animate(_animationController);
   }
 
@@ -67,7 +67,7 @@ class CollapsibleDrawerState extends State<CollapsibleDrawer>
                 });
               },
               child: AnimatedIcon(
-                icon: AnimatedIcons.arrow_menu,
+                icon: AnimatedIcons.menu_arrow,
                 progress: _animationController,
                 color: Colors.white,
                 size: 30.0,
