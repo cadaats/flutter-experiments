@@ -22,10 +22,10 @@ class CollapsibleListTileState extends State<CollapsibleListTile> {
   @override
   void initState() {
     super.initState();
-    widthAnimation = Tween(begin: maxWidth, end: minWidth)
+    widthAnimation = Tween(begin: minWidth, end: maxWidth)
         .animate(widget.animationController);
     sizedBoxAnimation =
-        Tween(begin: 10.0, end: 0.0).animate(widget.animationController);
+        Tween(begin: 0.0, end: 10.0).animate(widget.animationController);
   }
 
   @override
