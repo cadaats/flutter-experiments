@@ -276,7 +276,7 @@ class _FabDialer extends State<FabDialer> with TickerProviderStateMixin {
           child: Stack(
               //fit: StackFit.expand,
               alignment: Alignment.bottomCenter,
-              overflow: Overflow.visible,
+              clipBehavior: Clip.none,
               children: childButtonsList.toList()
                 ..add(Positioned(
                     right: null, bottom: null, child: mainFloatingButton))));
@@ -298,7 +298,7 @@ class _FabDialer extends State<FabDialer> with TickerProviderStateMixin {
       return widget.hasBackground
           ? Stack(
               alignment: Alignment.topCenter,
-              overflow: Overflow.visible,
+              clipBehavior: Clip.none,
               children: [
                   Positioned(right: -16.0, bottom: -16.0, child: modal),
                   fabDialWidget

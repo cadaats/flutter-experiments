@@ -44,7 +44,7 @@ class CollapsibleDrawerState extends State<CollapsibleDrawer>
               animationController: _animationController,
             ),
             Divider(
-              color: Colors.red[300],
+              color: Colors.white38,
             ),
             Expanded(
               child: ListView.builder(

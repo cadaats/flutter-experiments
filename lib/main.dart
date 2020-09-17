@@ -1,4 +1,3 @@
-import 'package:dashboard/themes.dart';
 import 'package:dashboard/widgets/search/customsearch.dart';
 import 'package:dashboard/widgets/drawer/collapsibledrawer.dart';
 import 'package:dashboard/widgets/fabdial.dart';
@@ -82,15 +81,17 @@ class _DashboardHomePageState extends State<DashboardHome> {
                       context: context, delegate: CustomSearchDelegate());
                 },
               )),
+          IconButton(icon: Icon(Icons.chat), onPressed: () {}),
         ],
       ),
-      // drawer: CollapsibleDrawer(),
-      body: Stack(
+      body: Row(
         children: <Widget>[
-          Container(
-            color: drawerBackgroundColor,
-          ),
-          CollapsibleDrawer()
+          CollapsibleDrawer(),
+          Expanded(
+              child: Container(
+            color: Colors.black87,
+          )),
+          // CollapsibleDrawer(),
         ],
       ),
 
